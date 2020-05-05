@@ -198,7 +198,7 @@ class Artwork extends React.Component {
                 <div className="content-section introduction">
                     <div className="feature-intro">
                         <h1>Photograph Work</h1>
-                        <p>Galleria is a content gallery component.</p>
+                        <p>Some of the photgraph samples .</p>
 
                         {/* <AppContentContext.Consumer>
                             {context => <button onClick={() => context.onChangelogBtnClick("galleria")} className="layout-changelog-button">{context.changelogText}</button>}
