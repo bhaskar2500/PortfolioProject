@@ -2,6 +2,8 @@ import React from 'react';
 import { Panel } from 'primereact/panel';
 import { Editor } from 'primereact/editor';
 import { getResumeData } from '../../apis/ResumeService';
+import text  from './text.js'; // Relative path to your File
+
 class Resume extends React.Component {
     constructor() {
         super();
@@ -10,11 +12,12 @@ class Resume extends React.Component {
         }
     }
     componentDidMount() {
-        getResumeData().then((data) => {
-            data.json().then((json) => {
-                this.setState({ resumeHtmlValue: json.data });
-            })
-        })
+        // getResumeData().then((data) => {
+        //     data.json().then((json) => {
+        //         this.setState({ resumeHtmlValue: json.data });
+        //     })
+        // })
+        this.setState({resumeHtmlValue:text});
         // storeResumeData()
         // onTextChange={(e) => this.resumeTextChange()}
     }
