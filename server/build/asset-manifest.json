@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.db322eb3.chunk.css",
+    "main.js": "/static/js/main.b6467780.chunk.js",
+    "main.js.map": "/static/js/main.b6467780.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.28d92040.js",
+    "runtime-main.js.map": "/static/js/runtime-main.28d92040.js.map",
+    "static/css/2.2c024b72.chunk.css": "/static/css/2.2c024b72.chunk.css",
+    "static/js/2.961783aa.chunk.js": "/static/js/2.961783aa.chunk.js",
+    "static/js/2.961783aa.chunk.js.map": "/static/js/2.961783aa.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.644ff1f7a28023f2a9152c81f63bfa07.js": "/precache-manifest.644ff1f7a28023f2a9152c81f63bfa07.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2c024b72.chunk.css.map": "/static/css/2.2c024b72.chunk.css.map",
+    "static/css/main.db322eb3.chunk.css.map": "/static/css/main.db322eb3.chunk.css.map",
+    "static/js/2.961783aa.chunk.js.LICENSE.txt": "/static/js/2.961783aa.chunk.js.LICENSE.txt",
+    "static/media/Bee.jpg": "/static/media/Bee.4a9605bf.jpg",
+    "static/media/Books.jpg": "/static/media/Books.7a532886.jpg",
+    "static/media/WaterDrop.jpg": "/static/media/WaterDrop.eb38d7ec.jpg",
+    "static/media/primereact.min.css": "/static/media/line.567f5738.gif",
+    "static/media/flower1.jpg": "/static/media/flower1.9e49d4bb.jpg",
+    "static/media/flower2.jpg": "/static/media/flower2.356be4b3.jpg",
+    "static/media/flower3.jpg": "/static/media/flower3.40d67e8d.jpg",
+    "static/media/theme.css": "/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
+    "static/media/primeicons.css": "/static/media/primeicons.e5e0e944.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28d92040.js",
+    "static/css/2.2c024b72.chunk.css",
+    "static/js/2.961783aa.chunk.js",
+    "static/css/main.db322eb3.chunk.css",
+    "static/js/main.b6467780.chunk.js"
+  ]
+}

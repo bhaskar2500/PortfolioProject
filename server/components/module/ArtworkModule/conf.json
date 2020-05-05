@@ -1,0 +1,18 @@
+{
+    "name": "artwork",
+    "expose": {
+      "controller": "artworkController",
+      "service": "docService",
+      "dao": "",
+      "conf": "conf",
+      "reg": "reg",
+      "route": "route",
+      "model": ""
+    },
+    "route": {
+      "path": "/api/artwork/",
+      "file": "route",
+      "auth": false
+    },
+    "depts": []
+  }
