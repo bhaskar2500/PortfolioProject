@@ -1,0 +1,11 @@
+/* .ql-editor  p{
+    pointer-events: none !important;
+} */
+
+.p-panel.p-component{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    
+}

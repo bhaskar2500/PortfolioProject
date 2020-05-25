@@ -42,6 +42,8 @@ class Projects extends React.Component {
         return (
             <div>
                 <div>
+                    <br/>
+                    <br/>
                     <Panel header="Project 1 - Basic Summarization of text">
                         <div>
                             {this.state.isSummarized ? null : <ProgressSpinner />}

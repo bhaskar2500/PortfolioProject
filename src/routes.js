@@ -1,7 +1,7 @@
 
 import React from "react";
-import Home from './components/Home/Home';
-import { Route, Switch,HashRouter } from "react-router-dom";
+// import Home from './components/Home/Home';
+import { Route, HashRouter } from "react-router-dom";
 import Projects from './components/Projects/Projects';
 import Artwork from './components/Artwork/Artwork';
 import Documentation from './components/Documentation/Documentation';

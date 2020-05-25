@@ -1,8 +1,15 @@
-.custom-galleria {
+.custom-galleria {  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px;
+   
     .p-galleria-content {
         height: 95%;
         overflow: hidden;
         position: relative;
+        text-align:center;
+
 
         .p-galleria-thumbnail-content {
             position: absolute;
