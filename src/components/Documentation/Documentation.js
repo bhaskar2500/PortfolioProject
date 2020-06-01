@@ -26,18 +26,18 @@ class Documentation extends React.Component {
 
     onEditClick(id) {
         let note = notesData.find(i => i.id === id);
-
         this.setState({ displayCreateDialog: true, noteContent: note.content, noteTitle: note.title });
 
     }
     onCreateClick(currentComponent) {
         // console.log(this)
+        currentComponent.setState({noteContent:'',noteTitle:''})
         console.log(currentComponent)
         currentComponent.setState({ displayCreateDialog: true });
     }
     onNoteSave() {
         let content = this.state.noteContent;
-        let title = this.state.contentTitle;
+        let title = this.state.noteTitle;
         let id = parseInt(notesData[notesData.length - 1].id) + 1;
         notesData.push({ content: content, title: title, id: id });
         this.setState({ displayCreateDialog: false });
