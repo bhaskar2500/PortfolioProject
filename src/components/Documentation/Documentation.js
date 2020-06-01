@@ -17,7 +17,6 @@ class Documentation extends React.Component {
 
         this.state = {
             activeIndex: ''
-            , title: ""
             , displayCreateDialog: false
             , noteContent: ""
             , noteTitle: ""
