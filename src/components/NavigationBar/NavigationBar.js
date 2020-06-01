@@ -17,7 +17,7 @@ class NavigationBar extends React.Component {
                 // { label: 'Home', value: 'Home', icon: 'pi pi-fw pi-home', url:'/#/Home'},
                 { label: 'Art Work', value: "Artwork", icon: 'pi pi-fw pi-calendar',url:'/#/Artwork' },
                 { label: 'Resume', value: 'Resume', icon: 'pi pi-fw pi-pencil',url:'/#/Resume' },
-                // { label: 'Documentation', icon: 'pi pi-fw pi-file' ,value:"Documentation",url:"/#/Documentation"},
+                { label: 'Documentation/Notes', icon: 'pi pi-fw pi-file' ,value:"Documentation",url:"/#/Documentation"},
                 { label: 'Projects', value: 'Projects', icon: 'pi pi-fw pi-cog',url:'/#/Projects' }
             ]
         }

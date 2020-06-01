@@ -8,7 +8,7 @@ module.exports.getNavBarDetails = function () {
 }
 
 module.exports.getSummarizedData = function (data) {
-    if (data != "") {
+    if (data !== "") {
         const requestOptions = {
             method: 'post',
             body: JSON.stringify({"data":data}),

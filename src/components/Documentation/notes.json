@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Azure AI Storage",
+        "content": "\n\nStorage for Azure Ai Solutions \n\nStructured Data - Below services can help - \nAzure SQL DB\nAzure PostgreSQL \nAzure maria db . \n\nCosmos Db - High performance ,geo replicated multi NO SQL model db service with set of apis simiilar to other db services like   mongo ,document \nkey-value , columnar store and graph dbs.  \nWhen to chose ? \n1. If your data changes alot (millions transactions /sec)\n2. Petabytes of data\n3. Maintains the veracity of the data\n\nunstructured -\n\nBlob Storage Blob storage is a feature in Microsoft Azure that lets developers store unstructured data in Microsoft's cloud platform.\nThis data can be accessed from anywhere in the world and can include audio, video and text. \nBlobs are grouped into 'containers' that are tied to user accounts\n\nEach blob can be accessed by a url which looks like http://mystorageaccount.blob.core.windows.net\n\n\nAzure Data Lake (Gen 2) -Centralized transformed data used for tasks such as reporting, visualization, advanced analytics and machine learning .Each \ndata lake has a file system underneath . \n"
+    },
+    {
+        "id": 2,
+        "title": "More topics to cover",
+        "content": "\nProcessing in Azure AI Solutions\n\nAzure AI Services and Models\n \nAzure components and Servies\n\nAutomated Machine learning\n\n\n "
+    }
+]
