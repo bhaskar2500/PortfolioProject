@@ -3,4 +3,6 @@ Using create-react-app bootstrap a react appliaction.
 
 
 
-## Portfolio componenet 
+## Build instructions
+
+Use `npm run build --production` to build the production grade file
