@@ -3,7 +3,7 @@ import { Panel } from 'primereact/panel';
 import { Editor } from 'primereact/editor';
 import { Button } from 'primereact/button';
 
-import { getResumeData } from '../../apis/ResumeService';
+// import { getResumeData } from '../../apis/ResumeService';
 import text from './text.js'; // Relative path to your File
 import './Resume.css';
 import ResumePDF from  './Resume.docx';
