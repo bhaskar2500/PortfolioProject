@@ -1,0 +1,65 @@
+$size: 180px;
+$logoSize: 100px;
+$loaderWidth: 4px;
+
+.container {
+  // padding: 10px;
+  width: $size;
+  height: $size;
+  line-height: $size;
+  text-align: center;
+  position: relative;
+  border-radius: 70%;
+  background-color: black;
+  // border: 1px solid red;
+}
+
+.innerContainer {
+  width: $size - $loaderWidth;
+  height: $size - $loaderWidth;
+  border-radius: 70%;
+  position: absolute;
+  background: white;
+  top: $loaderWidth;
+  z-index: -1;
+}
+
+.loadingIndicator {
+  position: absolute;
+  // background-color: #eee;
+  width: $size;
+  height: $size;
+  border-radius: 70%;
+  border-top: $loaderWidth solid #f55d17;
+  top: 0;
+  left: 0;
+  // -webkit-animation: spin 2s linear infinite !important;
+  animation: spin 1s linear infinite;
+  // -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.logo {
+  max-width: $logoSize;
+  max-height: $logoSize;
+  padding-bottom: 10px;
+  vertical-align: middle;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

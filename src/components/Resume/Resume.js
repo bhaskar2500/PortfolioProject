@@ -2,7 +2,9 @@ import React from 'react';
 import { Panel } from 'primereact/panel';
 import { Editor } from 'primereact/editor';
 import { Button } from 'primereact/button';
-
+import { Suspense } from 'react'
+import useFetch from 'fetch-suspense'
+import Loading from '../Loading/Loading'
 import { getResumeData } from '../../apis/ResumeService';
 import text from './text.js'; // Relative path to your File
 import './Resume.css';
@@ -27,11 +29,12 @@ class Resume extends React.Component {
     }
 
     onResumeEdit(e) {
-        console.log(e.htmlValue)
+        // console.log(e.htmlValue)
 
     }
 
     render() {
+        const data= useFetch("https://jsonplaceholder.typicode.com/todos/");
         return (
             <div>
                 <div>
@@ -55,4 +58,11 @@ class Resume extends React.Component {
     }
 
 }
-export default Resume
+function ResumeContainer(props) {
+    return (
+      <Suspense fallback={<Loading />}>
+        <Resume {...props} />
+      </Suspense>
+    )
+}
+export default ResumeContainer

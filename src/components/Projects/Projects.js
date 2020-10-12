@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../Projects/style.module.scss'
 import { Panel } from 'primereact/panel';
 import { Editor } from 'primereact/editor';
 import { Button } from 'primereact/button';
@@ -39,11 +40,10 @@ class Projects extends React.Component {
     }
 
     render() {
+        console.log(styles,'---->');
         return (
             <div>
-                <div>
-                    <br/>
-                    <br/>
+                <div className={styles.container}>
                     <Panel header="Project 1 - Basic Summarization of text">
                         <div>
                             {this.state.isSummarized ? null : <ProgressSpinner />}

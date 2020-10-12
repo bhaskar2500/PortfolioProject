@@ -1,0 +1,12 @@
+$size: 100%;
+$logoSize: 70%;
+$loaderWidth: 2px;
+
+.container {
+    padding: 30px;
+    width: $size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    position: relative;
+  }

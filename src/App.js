@@ -1,20 +1,23 @@
 
 import './App.css';
-import React from 'react';
+import React,{Suspense} from 'react';
+import Loading from '../src/components/Loading/Loading';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
-import { NavigationBar } from './components/NavigationBar/NavigationBar';
+import { NavigationBarContainer } from './components/NavigationBar/NavigationBar';
 import createBrowserHistory from 'history/createBrowserHistory';
+import useFetch from 'fetch-suspense'
 
 import { Routes } from './routes';
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
+  const data= useFetch("https://jsonplaceholder.typicode.com/todos/");
   return (
     <div>
       <Router history={createBrowserHistory}>
         <Header />
-        <NavigationBar></NavigationBar>
+        <NavigationBarContainer></NavigationBarContainer>
           <Routes />
         <Footer />
       </Router>
@@ -22,4 +25,11 @@ function App() {
   );
 }
 
-export default App;
+const AppContainer= function(props){
+  return (
+  <Suspense fallback={<Loading />}>
+    <App {...props}></App>
+  </Suspense>
+  )
+}
+export default AppContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import notesData from './notes.json';
-
+import styles from './style.module.scss';
 import { Card } from 'primereact/card';
 import { Panel } from 'primereact/panel';
 import { Button } from 'primereact/button';
@@ -50,20 +50,20 @@ class Documentation extends React.Component {
 
         const header = <span> <i class="fas fa-sticky-note" ></i> </span>;
 
-        return (<div>
-            <br/>
-            
+        return (
+        <div className={styles.container}>
             <Panel>
                 {
                     notesData.map((note) => {
                         console.log(note);
                         const footer = <span>
-                            <Button label="Edit" icon="pi pi-check" style={{ marginRight: '.25em' }} onClick={() => this.onEditClick(note.id)} />
+                            <Button label="Edit"  icon="pi pi-check" onClick={() => this.onEditClick(note.id)} />
+                            <span className = {styles.pullLeft}> </span>
                             <Button label="Cancel" icon="pi pi-times" className="p-button-secondary" />
                         </span>;
 
                         return (
-                            < Card title={`Note ${note.id} : ${note.title}`} style={{ width: '100%' }} footer={footer} header={header} activeIndex={this.state.activeIndex} onTabChange={(e) => this.setState({ activeIndex: e.index })}>
+                            < Card title={`Note ${note.id} : ${note.title}`}  footer={footer} header={header} activeIndex={this.state.activeIndex} onTabChange={(e) => this.setState({ activeIndex: e.index })}>
                                 {note.content.split(' ').slice(0, 50).join(' ')}...
                             </Card>
                         )
