@@ -11,7 +11,7 @@ class NavigationBar extends React.Component {
         super(props);
         const url = window.location.href.split("#")[1];
         this.state = {
-            activeItem: url.length>1 ? url.replace('/','') :"",
+            activeItem: url && url.length>1 ? url.replace('/','') :"",
             items: [
                 // { label: 'Home', value: 'Home', icon: 'pi pi-fw pi-home', url:'/#/Home'},
                 { label: 'Art Work', value: "Artwork", icon: 'pi pi-fw pi-calendar',url:'/#/Artwork' },

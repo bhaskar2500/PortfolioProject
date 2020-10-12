@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../Projects/style.module.scss'
-import { Panel } from 'primereact/panel';
+import { Accordion,AccordionTab } from 'primereact/accordion';
 import { Editor } from 'primereact/editor';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
@@ -43,25 +43,28 @@ class Projects extends React.Component {
         console.log(styles,'---->');
         return (
             <div>
+                <h2 className={styles.pullLeft}>Expand the tabs to see the demo </h2>
                 <div className={styles.container}>
-                    <Panel header="Project 1 - Basic Summarization of text">
+                <Accordion>
+                    <AccordionTab  toggleable header="Project 1 - Basic Summarization of text">
                         <div>
                             {this.state.isSummarized ? null : <ProgressSpinner />}
 
                         </div>
                         <Editor style={{ height: '320px' }} onTextChange={(e) => this.setState({textToSummarize : e.textValue})} value={this.state.text} >
                         </Editor>
-                    </Panel>
-                </div>
-                <div>
+                        <div>
                     <Button label="Summarize Text" className="btnSummary" onClick={(e) => this.OnSummarizeClick(this.state.textToSummarize)} ></Button>
-
+                    </div>
+                    <div>
+                        < Dialog header="Summarized Text" visible={this.state.visible} style={{ width: '50vw' }} modal={true} onHide={() => this.setState({ visible: false })} >
+                            {this.state.summarizedText}
+                        </Dialog>
+                    </div>
+                        </AccordionTab>
+                </Accordion>
                 </div>
-                <div>
-                    < Dialog header="Summarized Text" visible={this.state.visible} style={{ width: '50vw' }} modal={true} onHide={() => this.setState({ visible: false })} >
-                        {this.state.summarizedText}
-                    </Dialog>
-                </div>
+                
             </div>
         )
     }

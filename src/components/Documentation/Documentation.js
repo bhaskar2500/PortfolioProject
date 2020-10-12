@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 import { Editor } from 'primereact/editor';
 import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
+import Pagination from '../Pagination/Pagination';
 
 
 
@@ -14,19 +15,25 @@ class Documentation extends React.Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             activeIndex: ''
             , displayCreateDialog: false
             , noteContent: ""
             , noteTitle: ""
+            ,notesData:notesData
         }
+    }
+    componentDidMount(){
+        this.onPaginationClick(0,5);
     }
 
     onEditClick(id) {
-        let note = notesData.find(i => i.id === id);
+        let note = this.state.notesData.find(i => i.id === id);
         this.setState({ displayCreateDialog: true, noteContent: note.content, noteTitle: note.title });
 
+    }
+    onPaginationClick(PAGE_NUM,MAX_COUNT){
+        this.setState({notesData: this.state.notesData.slice(PAGE_NUM,MAX_COUNT)});
     }
     onCreateClick(currentComponent) {
         // console.log(this)
@@ -37,8 +44,8 @@ class Documentation extends React.Component {
     onNoteSave() {
         let content = this.state.noteContent;
         let title = this.state.noteTitle;
-        let id = parseInt(notesData[notesData.length - 1].id) + 1;
-        notesData.push({ content: content, title: title, id: id });
+        let id = parseInt(this.state.notesData[this.state.notesData.length - 1].id) + 1;
+        this.setState({notesData: notesData.push({ content: content, title: title, id: id })});
         this.setState({ displayCreateDialog: false });
     }
     onHide() {
@@ -48,13 +55,13 @@ class Documentation extends React.Component {
     }
     render() {
 
-        const header = <span> <i class="fas fa-sticky-note" ></i> </span>;
+        const header = <span> <i className="fas fa-sticky-note" ></i> </span>;
 
         return (
         <div className={styles.container}>
-            <Panel>
+            <Panel header="TODO notes">
                 {
-                    notesData.map((note) => {
+                    this.state.notesData.map((note) => {
                         console.log(note);
                         const footer = <span>
                             <Button label="Edit"  icon="pi pi-check" onClick={() => this.onEditClick(note.id)} />
@@ -89,6 +96,7 @@ class Documentation extends React.Component {
 
                 <Button label="Add a Note + " className="fas fa-sticky-note" onClick={() => this.onCreateClick(this)} ></Button>
             </Panel>
+        <Pagination  handleClick={this.onPaginationClick.bind(this)} data={this.state.notesData}></Pagination>
         </div >
         )
     }
