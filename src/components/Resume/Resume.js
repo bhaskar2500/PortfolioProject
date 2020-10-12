@@ -3,7 +3,7 @@ import { Panel } from 'primereact/panel';
 import { Editor } from 'primereact/editor';
 import { Button } from 'primereact/button';
 import { Suspense } from 'react'
-import useFetch from 'fetch-suspense'
+// import useFetch from 'fetch-suspense'
 import Loading from '../Loading/Loading'
 // import { getResumeData } from '../../apis/ResumeService';
 import text from './text.js'; // Relative path to your File
