@@ -5,7 +5,7 @@ import { Button } from 'primereact/button';
 import { Suspense } from 'react'
 import useFetch from 'fetch-suspense'
 import Loading from '../Loading/Loading'
-import { getResumeData } from '../../apis/ResumeService';
+// import { getResumeData } from '../../apis/ResumeService';
 import text from './text.js'; // Relative path to your File
 import './Resume.css';
 import ResumePDF from  './Resume.docx';
@@ -34,7 +34,7 @@ class Resume extends React.Component {
     }
 
     render() {
-        const data= useFetch("https://jsonplaceholder.typicode.com/todos/");
+        // const data= useFetch("https://jsonplaceholder.typicode.com/todos/");
         return (
             <div>
                 <div>

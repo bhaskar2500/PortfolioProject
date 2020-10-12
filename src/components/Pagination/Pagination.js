@@ -1,8 +1,7 @@
-import React, { Component, useState } from 'react'
+import React, {useState} from 'react'
 
 function Pagination(props){
-        const [notesData,setNotesData]= useState(props.data);
-        console.log(props,'--------');
+        const [notesData]= useState(props.data);
         const PAGE_NUM = 1;
         const MAX_COUNT = 5;
         const paginationLength = parseInt(notesData.length/MAX_COUNT)+1;

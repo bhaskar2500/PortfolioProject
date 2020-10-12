@@ -12,7 +12,6 @@ import { Routes } from './routes';
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  const data= useFetch("https://jsonplaceholder.typicode.com/todos/");
   return (
     <div>
       <Router history={createBrowserHistory}>

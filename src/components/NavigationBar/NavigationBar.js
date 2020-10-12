@@ -1,4 +1,4 @@
-import { TabMenu,TabMenuProps } from 'primereact/tabmenu';
+import { TabMenu } from 'primereact/tabmenu';
 import React from 'react';
 
 import 'primeicons/primeicons.css';
@@ -25,7 +25,7 @@ class NavigationBar extends React.Component {
     
     render() {
         const activeElement = 
-         this.state.items.find(i=>i.value==this.state.activeItem)
+         this.state.items.find(i=>i.value === this.state.activeItem)
         return (
             <div className="NaviagtionContainer">
                 <div className="content-section introduction">

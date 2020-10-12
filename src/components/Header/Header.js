@@ -16,7 +16,7 @@ class Header extends React.Component {
 
                     <button className="IalUJ " title="Change Profile Photo">
 
-                        <img width="90"alt="Change Profile Photo" className="be6sR" src={pp} />
+                        <img width="90" alt="" className="be6sR" src={pp} />
 
                     </button>
                 </div>
