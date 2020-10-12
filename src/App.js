@@ -6,7 +6,7 @@ import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { NavigationBarContainer } from './components/NavigationBar/NavigationBar';
 import createBrowserHistory from 'history/createBrowserHistory';
-import useFetch from 'fetch-suspense'
+// import useFetch from 'fetch-suspense'
 
 import { Routes } from './routes';
 import { BrowserRouter as Router } from "react-router-dom";
