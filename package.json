@@ -13,7 +13,7 @@
     "fetch-suspense": "^1.2.2",
     "heroku": "^7.40.0",
     "heroku-cli": "^7.0.9",
-    "node-sass": "4.14.1",
+    "node-sass": "7.0.0",
     "primeicons": "2.0.0",
     "primereact": "4.2.0",
     "python-shell": "^1.0.8",
